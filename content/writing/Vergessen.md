@@ -18,13 +18,13 @@ Wenn ich sowieso alles vergessen würde, lohnt sich mein Aufwand im Moment dann 
 
 ---
 
-Aber eine Aussage einer Kommilitonin ist bei mir immer im Herz geblieben. Sie sagte gesagt:
+Aber eine Aussage einer Kommilitonin ist bei mir immer im Herz geblieben. Sie sagte damals:
 
 > Es wird vergessen, wenn es nicht angewendet wird.
 
-Die meinsten Kenntnisse bleiben nur für kurze Zeit, vielleicht weil vieles zu schwer und zu kompliziert ist, für was, wofür unser Gehirn eigentlich **geschaffen** wurde?
+Die meisten Kenntnisse bleiben nur für kurze Zeit, vielleicht weil vieles zu schwer und zu kompliziert ist, für was, wofür unser Gehirn eigentlich **geschaffen** wurde?
 
-Der Wert des Lernens liegt **darin**, dass es leichter wird, sich beim nächsten Mal wieder **anzueignen**. 
+Der Wert des Lernens liegt **darin**, dass es leichter wird, **sich** beim nächsten Mal wieder **anzueignen**. 
 
 Was ich für eine **gewisse** Zeit gewinnen kann, sind Erinnerungen an bestimmte Aufgaben oder an bestimmte Typen und Kategorien von Aufgaben sowie die entsprechenden Lösungsmuster.
 

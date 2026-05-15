@@ -12,9 +12,11 @@ import AnyTrapDemo from "../components/any-trap-demo";
 import matter from "gray-matter";
 import Link from "next/link";
 import Copyright from "@/app/components/copyright";
+import GoChannelTrapDemo from "../components/go-channel-trap-demo";
 
 const components = {
   AnyTrapDemo,
+  GoChannelTrapDemo,
 };
 
 export async function generateStaticParams() {
