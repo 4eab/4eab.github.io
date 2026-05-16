@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <main className="max-w-4xl mx-auto px-8 py-20">
@@ -8,7 +10,9 @@ export default function About() {
           </h1>
           <div className="flex flex-col space-y-1">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+              <Link href="/about/cv" className="hover:text-emerald-600 hover:dark:text-blue-400">
               关于我
+            </Link>
             </h2>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight opacity-20">
               About Me
