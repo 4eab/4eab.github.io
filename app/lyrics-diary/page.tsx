@@ -290,12 +290,12 @@ export default function HomePage() {
 
   if (!selectedLyric)
     return (
-      <div className="fixed inset-0 w-screen h-screen z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30"></div>
+      <div className="fixed inset-0 w-screen h-[100dvh] z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30"></div>
     );
 
   return (
-    <div className="fixed inset-0 w-screen h-screen z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30">
-      <main className="relative w-full h-screen flex flex-col">
+    <div className="fixed inset-0 w-screen h-[100dvh] z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30">
+      <main className="relative w-full h-[100dvh] flex flex-col">
         {/* Full Screen Backgroud */}
         <div className="absolute inset-0 z-0">
           {/* Dark Filter Layer */}
@@ -334,7 +334,7 @@ export default function HomePage() {
             >
               {isTranslating ? (
                 <span className="text-[10px] tracking-widest animate-pulse">
-                  ⏳...
+                  ⏳
                 </span>
               ) : (
                 <Languages className="w-4 h-4" />
@@ -356,7 +356,7 @@ export default function HomePage() {
             href={selectedLyric.raw_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-full aspect-square max-w-[280px] md:max-w-[400px] rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.03] shrink-0 block"
+            className="group relative w-full aspect-square max-w-[200px] md:max-w-[400px] rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.03] shrink-0 block"
             title="OPEN IN APPLE MUSIC"
           >
             <Image
@@ -537,6 +537,7 @@ export default function HomePage() {
                       setShowTranslation(false);
                       setTranslatedText("");
                       setSelectedLyric(lyric);
+                      setIsArchiveOpen(false);
                     }}
                     className={`p-2 rounded-xl border flex items-center gap-3 cursor-pointer text-left ${
                       lyric.id === selectedLyric.id
