@@ -295,7 +295,7 @@ export default function HomePage() {
 
   return (
     <div className="fixed inset-0 w-screen h-screen z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30">
-      <main className="relative w-full min-h-screen">
+      <main className="relative w-full h-screen flex flex-col">
         {/* Full Screen Backgroud */}
         <div className="absolute inset-0 z-0">
           {/* Dark Filter Layer */}
@@ -351,7 +351,7 @@ export default function HomePage() {
         </header>
 
         {/* Lyrics Content */}
-        <div className="relative z-20 flex flex-col md:flex-row h-[calc(100vh-88px)] px-6 pb-8 md:px-16 lg:px-32 md:pb-16 gap-8 md:gap-16 lg:gap-32 items-center">
+        <div className="relative z-20 flex flex-col md:flex-row flex-1 min-h-0 px-6 pb-8 md:px-16 lg:px-32 md:pb-16 gap-8 md:gap-16 lg:gap-32 items-center">
           <a
             href={selectedLyric.raw_url}
             target="_blank"
