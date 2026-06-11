@@ -10,16 +10,43 @@ export default function About() {
           </h1>
           <div className="flex flex-col space-y-1">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-              <Link href="/about/cv" className="hover:text-emerald-600 hover:dark:text-blue-400">
-              关于我
-            </Link>
+              <Link
+                href="/about/cv"
+                className="hover:text-emerald-600 hover:dark:text-blue-400"
+              >
+                关于我
+              </Link>
             </h2>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight opacity-20">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight opacity-20 dark:opacity-40">
               About Me
             </h2>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight opacity-10 font-light italic">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight opacity-10 dark:opacity-20 font-light italic">
               Über mich
             </h2>
+            <div className="pt-4 flex">
+              <Link
+                href="/lyrics-diary"
+                className="inline-flex items-center gap-3 text-slate-950 dark:text-white opacity-25 hover:opacity-100 dark:opacity-50 dark:hover:opacity-90 transition-all duration-500 group"
+                title="Lyrics Diary"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 dark:bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500 dark:bg-blue-400"></span>
+                </span>
+
+                <span className="flex items-center gap-[3px] h-3">
+                  <span className="w-[2px] h-2 bg-current rounded-full animate-[pulse_1s_infinite]" />
+                  <span className="w-[2px] h-3 bg-current rounded-full animate-[pulse_1.2s_infinite_0.1s]" />
+                  <span className="w-[2px] h-1.5 bg-current rounded-full animate-[pulse_0.8s_infinite_0.2s]" />
+                  <span className="w-[2px] h-4 bg-current rounded-full animate-[pulse_1.4s_infinite_0.3s]" />
+                  <span className="w-[2px] h-2.5 bg-current rounded-full animate-[pulse_1.1s_infinite_0.4s]" />
+                </span>
+
+                <span className="relative h-[2px] w-16 md:w-24 bg-slate-200 dark:bg-slate-600 rounded-full overflow-hidden transition-all duration-500 group-hover:w-24 md:group-hover:w-36">
+                  <span className="absolute top-0 left-0 h-full w-1/3 bg-emerald-500 dark:bg-blue-400 rounded-full transition-colors duration-300" />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -170,7 +197,6 @@ export default function About() {
 
                 {/* Convergence */}
                 <div className="relative pb-10 pl-6 border-l border-slate-200 dark:border-white/10">
-
                   <div className="absolute animate-ping left-[-4.5px] top-0 w-2 h-2 bg-black dark:bg-white rotate-45 group-hover:scale-125 transition-transform duration-500" />
                   <div className="absolute left-[-4.5px] top-0 w-2 h-2 bg-black dark:bg-white rotate-45 group-hover:scale-125 transition-transform duration-500" />
 
@@ -179,7 +205,6 @@ export default function About() {
                       Convergence: Computer Science
                     </p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -205,13 +230,13 @@ export default function About() {
             Current Status
           </h3>
           <div className="font-mono">
-    <p className="text-sm font-bold text-black dark:text-white">
-      B.Sc. Informatik, 4. Semester
-    </p>
-    <p className="text-[11px] text-slate-500">
-      Karlsruher Institut für Technologie (KIT)
-    </p>
-  </div>
+            <p className="text-sm font-bold text-black dark:text-white">
+              B.Sc. Informatik, 4. Semester
+            </p>
+            <p className="text-[11px] text-slate-500">
+              Karlsruher Institut für Technologie (KIT)
+            </p>
+          </div>
         </div>
         <div className="space-y-4 text-sm leading-relaxed text-right md:text-left">
           <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-300 dark:text-slate-700 font-mono">
@@ -222,7 +247,6 @@ export default function About() {
           </p>
         </div>
       </section>
-
 
       <footer className="mt-20">
         <div className="text-[10px] font-mono text-slate-300 dark:text-slate-800 uppercase tracking-[0.5em]">
