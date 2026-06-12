@@ -4,6 +4,7 @@ import { Languages } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { supabase } from "./lib/supabase";
+import Link from "next/link";
 
 export interface Lyric {
   id: string | number;
@@ -270,7 +271,9 @@ export default function HomePage() {
 
     setIsTranslating(true);
     try {
-      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=${encodeURIComponent(
+      const targetLang = navigator.language || "zh-CN";
+
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(
         text,
       )}`;
       const res = await fetch(url);
@@ -295,7 +298,7 @@ export default function HomePage() {
 
   return (
     <div className="fixed inset-0 w-screen h-[100dvh] z-[9999] bg-neutral-950 overflow-hidden flex flex-col md:flex-row text-white font-sans antialiased selection:bg-rose-500/30">
-      <main className="relative w-full h-[100dvh] flex flex-col">
+      <main className="relative w-full h-full flex flex-col">
         {/* Full Screen Backgroud */}
         <div className="absolute inset-0 z-0">
           {/* Dark Filter Layer */}
@@ -315,8 +318,14 @@ export default function HomePage() {
 
         {/* Nav Bar */}
         <header className="relative z-20 flex items-center justify-between px-6 py-6 md:px-16 md:py-8">
-          <div className="text-base font-black tracking-widest text-neutral-300">
-            LYRICS DIARY<span className="text-rose-500">.</span>
+          <div className="text-sm font-black tracking-widest text-neutral-400">
+            <Link
+              href="/"
+              className="text-sm font-black tracking-[0.3em] text-white hover:opacity-50 transition-opacity"
+            >
+              4eab
+            </Link>
+            <span className="text-rose-500">. </span> LYRICS
           </div>
 
           <div className="flex gap-3">
@@ -377,7 +386,7 @@ export default function HomePage() {
 
           <section className="flex-1 flex flex-col justify-between md:justify-center text-center md:text-left w-full h-full min-h-0">
             <div className="mb-4 md:mb-6">
-              <h2 className="text-lg md:text-2xl font-black text-[#FF4E6B] truncate">
+              <h2 className="overflow-y-auto whitespace-pre-line text-lg md:text-2xl font-black text-[#FF4E6B] truncate">
                 {selectedLyric.song_name}
               </h2>
               <p className="text-xs md:text-sm text-neutral-400 font-medium mt-1 truncate">
@@ -524,11 +533,11 @@ export default function HomePage() {
             })}
           </div>
 
-          <div className="border-t border-white/10 pt-4">
+          <div className="flex-1 min-h-0 flex flex-col border-t border-white/10 pt-4">
             <p className="text-[10px] font-bold text-neutral-500 tracking-wider mb-2 uppercase">
               {selectedDate} 记录 ({currentDayLyrics.length})
             </p>
-            <div className="space-y-2">
+            <div className="overflow-y-auto flex-1 min-h-0 scrollbar-none space-y-2">
               {currentDayLyrics.length > 0 ? (
                 currentDayLyrics.map((lyric) => (
                   <div
